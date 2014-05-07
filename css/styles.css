@@ -1,5 +1,6 @@
 body {
   background-color: #1E824C;
+  height: 100%;
 }
 
 li {
@@ -15,12 +16,14 @@ a {
   color: #ecf0f1;
   width: 100%;
   height: 100%;
-  position: relative;
+  position: absolute;
 }
 
 .presentation {
-  padding-top: 10%;
   text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 25%;
 }
 
 .presentation h2 {
@@ -58,24 +61,64 @@ a {
 .main-menu {
   text-align: center;
   position: absolute;
-  width: 50%;
-  top: 30%;
-  left: 27%;
-  float: left;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
 }
 
 .main-menu li {
-  padding: 5%;
+  position: absolute;
   font-size: 140%;
-  width: 20%;
-  height: 80px;
-  position: relative;
   float: left;
 }
 
 .main-menu li:hover {
   cursor: pointer;
 }
+
+#present {
+  top: 0;
+  left: 0;
+  width: 33.4%;
+  height: 50%;
+}
+
+#person {
+  top: 0;
+  left: 33.4%;
+  width: 33.4%;
+  height: 50%;
+}
+
+#edu {
+  top: 0;
+  left: 66.8%;
+  width: 33.4%;
+  height: 50%;
+}
+
+#work {
+  top: 50%;
+  left: 0;
+  width: 33.4%;
+  height: 50%;
+}
+
+#skill {
+  top: 50%;
+  left: 33.4%;
+  width: 33.4%;
+  height: 50%;
+}
+
+#cont {
+  top: 50%;
+  left: 66.8%;
+  width: 33.4%;
+  height: 50%;
+}
+
 
 #present,
 #edu,
@@ -92,11 +135,11 @@ a {
 
 .back {
   cursor: pointer;
-  position: relative;
+  position: absolute;
   left: 2%;
-  width: 5.4%;
-  height: 50px;
-  top: 20px;
+  width: 65px;
+  height: 62px;
+  top: 5%;
   border: 1px dashed #000;
   border-radius: 50%;
   -webkit-transition: border 0.3s, -webkit-transform 0.3s;
@@ -105,9 +148,9 @@ a {
 
 .back:after {
   content: 'X';
-  left: 30%;
-  position: relative;
-  top: 20%;
+  left: 34%;
+  position: absolute;
+  top: 25%;
   color: #000;
   font-weight: bold;
   font-size: 150%;
@@ -119,47 +162,34 @@ a {
   transform: rotate(360deg);
 }
 
-.back img{
-  position: relative;
-  float: left;
-  top: 27px;
-}
-
-.back h1{
-  top: 27px;
-  position: relative;
-  font-size: 150%;
-}
-
 .info {
   font-size: 130%;
   position: absolute;
-  background-color: #00B16A;
-  width: 60%;
-  min-height: 100%;
-  top: 20%;
-  left: 20%;
+  background-color: #1E824C;
+  width: 100%;
+  height: 100%;
 }
 
 .title {
   text-align: center;
   font-size: 300%;
-  color: #000;
-  clear: both;
+  color: #FFF;
   font-weight: bold;
-  margin: 3% 0 0 0;
+  margin-top: 3%;
+}
+
+.content {
+  position: relative;
 }
 
 .personal .content {
   margin: 5% 0 5% 10%;
-  position: relative;
   width: 80%;
-  background-color: #000;
 }
 
 .photo {
-  width: 22.220681%;
-  margin: 4%;
+  width: 20.220681%;
+  margin: 3% 5% 0 15%;
   float: left;
   border: 4px solid hsl(192, 15%, 94%);
 }
@@ -167,15 +197,12 @@ a {
 .contact .content {
   font-size: 250%;
   text-align: center;
-  position: relative;
   margin: 15% 0 0 25%;
   width: 50%;
-  background-color: #000;
 }
 
 .skills .content {
   margin: 10% 0 0 8%;
-  position: relative;
   width: 100%;
 }
 
@@ -196,7 +223,6 @@ a {
   position: relative;
   margin: 10% 0 10% 20%;
   width: 60%;
-  background-color: #000;
 }
 
 .education ul {
@@ -219,7 +245,6 @@ a {
 .works ul {
   padding: 3%;
   width: 50%;
-  background-color: #000;
   margin-bottom: 5%;
 }
 
@@ -258,7 +283,7 @@ a {
 
 .icon {
   position: relative;
-  margin-bottom: 10%;
+  padding-top: 25%;
 }
 
 
@@ -354,8 +379,6 @@ a {
 @media (orientation: portrait) {
 
   .back {
-    width: 6%;
-    height: 60px;
   }
 
   .back:after {
@@ -365,7 +388,7 @@ a {
   }
 
   .presentation {
-    padding-top: 30%;
+    top: 20%;
   }
 
   .presentation h2 {
@@ -386,16 +409,53 @@ a {
   }
 
   .main-menu {
-    width: 100%;
-    top: 40%;
-    left: 0;
   }
 
   .main-menu li {
     padding: 5%;
     font-size: 300%;
+  }
+
+  #present {
+    top: 0;
+    left: 0;
     width: 40%;
-    height: 100px;
+    height: 33.4%;
+  }
+
+  #person {
+    top: 0;
+    left: 50%;
+    width: 40%;
+    height: 33.4%;
+  }
+
+  #edu {
+    top: 33.4%;
+    left: 0;
+    width: 40%;
+    height: 33.4%;
+  }
+
+  #work {
+    top: 33.4%;
+    left: 50%;
+    width: 40%;
+    height: 33.4%;
+  }
+
+  #skill {
+    top: 66.8%;
+    left: 0;
+    width: 40%;
+    height: 33.4%;
+  }
+
+  #cont {
+    top: 66.8%;
+    left: 50%;
+    width: 40%;
+    height: 33.4%;
   }
 
   .info {

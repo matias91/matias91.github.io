@@ -1,0 +1,14 @@
+.personal ul {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 4%;
+}
+
+.personal ul li {
+    margin: 8% 0%;
+}
+
+.personal .img-thumbnail {
+    width: 20.220681%;
+    float: left;
+}

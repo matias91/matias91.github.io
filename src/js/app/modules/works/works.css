@@ -1,0 +1,28 @@
+.works .content {
+    text-align: center;
+}
+
+.works ul li {
+    padding: 3%;
+}
+
+.works ul li span {
+    display: block;
+    margin: 1%;
+}
+
+.works ul li img {
+    margin-top: 3%;
+}
+
+/*.works .content {
+    margin: 7% 0 0 13%;
+    width: 70%;
+}
+
+.works ul {
+    padding: 3%;
+    width: 100%;
+    background-color: #000;
+    margin-bottom:5%;
+}*/

@@ -21,17 +21,26 @@ function(Backbone, PersonalView, WorksView, EducationView, SkillsView) {
     },
 
     changeView: function(view) {
+      var route = Backbone.history.getHash(),
+          previousTab = $('a.active'),
+          currentTab = $('a[href$="' + route + '"]'),
+          container = $('#content');
+
       if (this.currentView) {
           this.currentView.remove();
           this.currentView.unbind();
-          if (this.currentView.onClose) {
-              this.currentView.onClose();
-          }
       }
 
+      previousTab.toggleClass('active');
+      currentTab.toggleClass('active');
+
       this.currentView = view;
-      $('#content').empty();
-      $('#content').append(this.currentView.render().el);
+      container.fadeOut(200, function() {
+        container.empty();
+        container.append(this.currentView.render().el);
+        this.currentView.el.className = route;
+        container.fadeIn(200);
+      }.bind(this));
     },
 
     defaultRoute: function() {

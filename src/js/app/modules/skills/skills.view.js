@@ -1,7 +1,8 @@
 define( [
   'backbone',
   'text!./skills.hbs',
-  'css!./skills.css'
+  'css!./skills.css',
+  'bootstrap'
 ],
 
 function(Backbone, template) {
@@ -16,7 +17,6 @@ function(Backbone, template) {
 
   });
 
-    
   return SkillsView;
 
 });

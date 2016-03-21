@@ -16,7 +16,6 @@ function(Backbone, template) {
 
   });
 
-    
   return WorksView;
 
 });

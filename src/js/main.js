@@ -5,23 +5,19 @@ require.config( {
         'backbone'    : '../../bower_components/backbone/backbone-min',
         'text'        : '../../bower_components/requirejs-text/text',
         'css'         : '../../bower_components/require-css/css',
-        'hbs'         : '../../bower_components/require-handlebars-plugin/hbs'
+        'hbs'         : '../../bower_components/require-handlebars-plugin/hbs',
+        'bootstrap'   : '../../bower_components/bootstrap/dist/js/bootstrap.min'
     },
 
     shim: {
-
-        // 'jquery-knob' : {
-        //   deps : ['jquery'],
-        //   exports : '$'
-        // },
-
-        // 'handlebars' : {
-        //   exports : 'Handlebars'
-        // },
-
         'backbone' : {
             deps : ['underscore','jquery'],
             exports : 'Backbone'
+        },
+
+        'bootstrap' : {
+            deps : ['jquery'],
+            exports : 'Bootstrap'
         },
 
         'underscore' : {

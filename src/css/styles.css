@@ -1,6 +1,7 @@
 body {
-  background-color: #252830;
   height: 100%;
+  background-color: #252830;
+  font-family: 'Roboto', sans-serif;
 }
 
 li {
@@ -12,11 +13,33 @@ a {
   text-decoration: none;
 }
 
-.container {
-  margin-top: 2%;
+/* JUMBOTRON */
+
+.jumbotron {
+  position: relative;
+  width: 100%;
+  height: 272px;
+  top: 0;
 }
 
-/* NAV BAR STYLES */
+.jumbotron-text {
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+}
+
+.jumbotron-bg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 302px;
+  background-image: url('../images/textures.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* NAV BAR */
 
 .nav > li:not(:first-child) {
   margin-top: 2px;
@@ -24,62 +47,41 @@ a {
 
 .nav > li > a {
   border-radius: 4px;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
-.nav > li > a:hover {
-  color: #FFF;
-  background-color: #434857;
-}
-
+.nav > li > a:hover,
 .nav > li > a:focus {
-  color: #252830;
-  background-color: #1CA8DD;
+  outline: 0;
+  color: #FFF;
+  background: #434857;
+  background: linear-gradient(to right, #434857, transparent);
+}
+
+.nav > li > a.active {
+  color: #FFF;
+  background: #AA2E30;
+  background: linear-gradient(to right, #AA2E30, transparent);
 }
 
 /* */
 
 .main {
-  font-family: 'Rosario', sans-serif;
+  background-color: #252830;
   color: #ecf0f1;
 }
 
-.presentation {
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  top: 25%;
+.main .container {
+  padding: 1% 2%;
 }
 
-.presentation h2 {
-  font-size: 300%;
-  font-weight: lighter;
-}
 
-.name {
+
+
+
+/*.name {
   font-size: 350%;
   margin: 3%;
-}
-
-.button {
-  display: inline-block;
-  padding: 1%;
-  font-size: 150%;
-  margin: 4%;
-  background-color: #049372;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  box-shadow: 0 5px 0 hsl(0, 1%, 41%);
-  position: relative;
-  top: -5px;
-  -webkit-transition: top 0.3s, box-shadow 0.3s;
-  transition: top 0.3s, box-shadow 0.3s;
-  cursor: pointer;
-}
-
-.button:hover {
-  top: 0;
-  box-shadow: none;
 }
 
 .main-menu {
@@ -117,10 +119,6 @@ a {
   margin-top: 3%;
 }
 
-.content {
-  position: relative;
-}
-
 .contact .content {
   font-size: 250%;
   text-align: center;
@@ -145,4 +143,4 @@ a {
 .icon {
   position: relative;
   padding-top: 25%;
-}
+}*/

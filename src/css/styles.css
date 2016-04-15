@@ -1,7 +1,12 @@
-body {
+html,
+body,
+article {
   height: 100%;
+}
+
+body {
   background-color: #252830;
-  font-family: 'Roboto', sans-serif;
+  /*font-family: 'Roboto', sans-serif;*/
 }
 
 li {
@@ -9,8 +14,18 @@ li {
 }
 
 a {
-  color: #CFD2DA;
+  color: #434857;
   text-decoration: none;
+}
+
+/* WIP */
+
+.wip {
+  position: absolute;
+  padding: 10px 20px;
+  color: #FFF;
+  font-size: 20px;
+  z-index: 5;
 }
 
 /* JUMBOTRON */
@@ -42,26 +57,53 @@ a {
 /* NAV BAR */
 
 .nav > li:not(:first-child) {
-  margin-top: 2px;
+  margin-top: 20px;
 }
 
 .nav > li > a {
-  border-radius: 4px;
-  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  font-size: 20px;
+  text-transform: uppercase;
+  transition: color 0.5s ease-in-out;
+}
+
+.nav > li > a:before {
+  background-image: linear-gradient(to right, #434857, transparent);
+}
+
+.nav > li > a:after {
+  max-width: 0;
+  background-image: linear-gradient(to right, #AA2E30, transparent);
+  transition: max-width 0.5s ease-in-out;
+}
+
+.nav > li > a:before,
+.nav > li > a:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
 }
 
 .nav > li > a:hover,
 .nav > li > a:focus {
   outline: 0;
   color: #FFF;
-  background: #434857;
-  background: linear-gradient(to right, #434857, transparent);
+  background-color: transparent;
+}
+
+.nav > li > a:hover:after,
+.nav > li > a:focus:after{
+  max-width: 100%;
 }
 
 .nav > li > a.active {
   color: #FFF;
-  background: #AA2E30;
-  background: linear-gradient(to right, #AA2E30, transparent);
+}
+
+.nav > li > a.active:after {
+  max-width: 100%;
 }
 
 /* */
@@ -72,10 +114,23 @@ a {
 }
 
 .main .container {
-  padding: 1% 2%;
+  padding: 20px 0 0 120px;
 }
 
+.main .container .info {
+  display: inline-block;
+  padding: 60px;
+  width: 100%;
+  background: rgba(170, 46, 48, 0.2);
+  border: 2px solid #434857;
+  border-radius: 4px;
+}
 
+/* BOOTSTRAP RESET */
+
+.page-header {
+  border-bottom: 0;
+}
 
 
 

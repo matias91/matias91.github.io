@@ -5,6 +5,7 @@
 .personal .img-thumbnail {
     width: 20.220681%;
     float: left;
-    background: radial-gradient(circle, #AA2E30 60%, transparent);
+    background: transparent;
     border: none;
+    border-radius: 100%;
 }

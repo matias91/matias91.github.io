@@ -1,7 +1,6 @@
 define( [
   'backbone',
-  'text!./personal.hbs',
-  'css!./personal.css'
+  'text!./personal.hbs'
 ],
 
 function(Backbone, template) {

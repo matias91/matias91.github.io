@@ -1,7 +1,6 @@
 define( [
   'backbone',
   'text!./skills.hbs',
-  'css!./skills.css',
   'bootstrap'
 ],
 

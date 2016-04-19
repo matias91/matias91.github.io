@@ -1,7 +1,6 @@
 define( [
   'backbone',
-  'text!./education.hbs',
-  'css!./education.css'
+  'text!./education.hbs'
 ],
 
 function(Backbone, template) {

@@ -24,23 +24,20 @@ function(Backbone, PersonalView, WorksView, EducationView, SkillsView) {
       var route = Backbone.history.getHash(),
           previousTab = $('a.active'),
           currentTab = $('a[href$="' + route + '"]'),
-          container = $('#content');
-
-      if (this.currentView) {
-          this.currentView.remove();
-          this.currentView.unbind();
-      }
+          container = $('#content .info'),
+          content;
 
       previousTab.toggleClass('active');
       currentTab.toggleClass('active');
 
       this.currentView = view;
-      container.fadeOut(200, function() {
-        container.empty();
-        container.append(this.currentView.render().el);
+      container.animate({opacity: 0}, 500, function() {
+        content = $(this.currentView.render().el);
+        container.html(content);
         this.currentView.el.className = route;
-        container.fadeIn(200);
+        container.animate({opacity: 1, height: content.css('height')}, 500);
       }.bind(this));
+
     },
 
     defaultRoute: function() {

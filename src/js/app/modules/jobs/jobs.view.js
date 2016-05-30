@@ -1,12 +1,12 @@
 define( [
   'backbone',
-  'text!./works.hbs'
+  'text!./jobs.hbs'
 ],
 
 function(Backbone, template) {
   'use strict';
 
-  var WorksView = Backbone.View.extend({
+  var JobsView = Backbone.View.extend({
 
     render: function() {
         this.$el.html(template);
@@ -15,6 +15,6 @@ function(Backbone, template) {
 
   });
 
-  return WorksView;
+  return JobsView;
 
 });

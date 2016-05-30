@@ -36,6 +36,25 @@ function(Backbone, template) {
 
 });;define( [
   'backbone',
+  'text!./jobs.hbs'
+],
+
+function(Backbone, template) {
+  'use strict';
+
+  var JobsView = Backbone.View.extend({
+
+    render: function() {
+        this.$el.html(template);
+        return this;
+    },
+
+  });
+
+  return JobsView;
+
+});;define( [
+  'backbone',
   'text!./personal.hbs'
 ],
 
@@ -73,38 +92,19 @@ function(Backbone, template) {
 
   return SkillsView;
 
-});;define( [
-  'backbone',
-  'text!./works.hbs'
-],
-
-function(Backbone, template) {
-  'use strict';
-
-  var WorksView = Backbone.View.extend({
-
-    render: function() {
-        this.$el.html(template);
-        return this;
-    },
-
-  });
-
-  return WorksView;
-
 });;define([
   'backbone',
   './modules/personal/personal.view',
-  './modules/works/works.view',
+  './modules/jobs/jobs.view',
   './modules/education/education.view',
   './modules/skills/skills.view'
 ],
 
-function(Backbone, PersonalView, WorksView, EducationView, SkillsView) {
+function(Backbone, PersonalView, JobsView, EducationView, SkillsView) {
   var Router = Backbone.Router.extend({
     routes: {
       'personal' : 'showPersonalView',
-      'works': 'showWorksView',
+      'jobs': 'showJobsView',
       'education': 'showEducationView',
       'skills': 'showSkillsView',
       '*actions': 'defaultRoute'
@@ -118,17 +118,18 @@ function(Backbone, PersonalView, WorksView, EducationView, SkillsView) {
       var route = Backbone.history.getHash(),
           previousTab = $('a.active'),
           currentTab = $('a[href$="' + route + '"]'),
-          container = $('#content .info');
+          container = $('#content .info'),
+          content;
 
       previousTab.toggleClass('active');
       currentTab.toggleClass('active');
 
       this.currentView = view;
-      container.animate({opacity: 0, height: 'hide'}, 500, function() {
-        container.empty();
-        container.append(this.currentView.render().el);
+      container.animate({opacity: 0}, 500, function() {
+        content = $(this.currentView.render().el);
+        container.html(content);
         this.currentView.el.className = route;
-        container.animate({opacity: 1, height: 'show'}, 500);
+        container.animate({opacity: 1}, 500);
       }.bind(this));
 
     },
@@ -143,9 +144,9 @@ function(Backbone, PersonalView, WorksView, EducationView, SkillsView) {
       this.changeView(personalView);
     },
 
-    showWorksView: function() {
-      var worksView = new WorksView();
-      this.changeView(worksView);
+    showJobsView: function() {
+      var jobsView = new JobsView();
+      this.changeView(jobsView);
     },
 
     showEducationView: function() {

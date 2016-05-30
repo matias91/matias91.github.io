@@ -1,29 +1,62 @@
 .skills {
-    a {
-        color: #FFFFFF;
-        font-size: 20px;
+    background-color: #5052B5;
 
-        &:hover {
-            text-decoration: none;
+    &__list {
+        & > li {
+            display: inline-block;
+            padding: 10px 20px;
+            width: 100%;
         }
     }
 
-    .logo-thumbnail {
-        width: 10%;
+    &__subtitle {
+        margin-bottom: 40px;
     }
 
-    .panel-heading {
-        padding: 5px 15px;
-        color: #CFD2DA;
-        background-color: #1E2127;
+    &__languages {
+        ul {
+            text-align: center;
+
+        }
     }
 
-    .panel-collapse {
-        background-color: #434857;
+    &__languages-img {
+        width: 80px;
     }
 
-    .glyphicon {
-        margin-right: 5px;
-        color: #1BC98E;
+    &__web {
+        li {
+            font-size: 16px;
+
+            .glyphicon {
+                margin-right: 5px;
+                color: #1BC98E;
+            }
+        }
+    }
+
+    &__complements {
+        li {
+            padding: 10px;
+            height: 60px;
+
+            a {
+                color: #FFFFFF;
+                font-size: 20px;
+
+                &:hover {
+                    text-decoration: none;
+                }
+
+                .logo-thumbnail {
+                    width: 40px;
+                }
+
+                span {
+                    padding-left: 10px;
+                }
+            }
+
+        }
     }
 }

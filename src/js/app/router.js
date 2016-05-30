@@ -1,16 +1,16 @@
 define([
   'backbone',
   './modules/personal/personal.view',
-  './modules/works/works.view',
+  './modules/jobs/jobs.view',
   './modules/education/education.view',
   './modules/skills/skills.view'
 ],
 
-function(Backbone, PersonalView, WorksView, EducationView, SkillsView) {
+function(Backbone, PersonalView, JobsView, EducationView, SkillsView) {
   var Router = Backbone.Router.extend({
     routes: {
       'personal' : 'showPersonalView',
-      'works': 'showWorksView',
+      'jobs': 'showJobsView',
       'education': 'showEducationView',
       'skills': 'showSkillsView',
       '*actions': 'defaultRoute'
@@ -35,7 +35,7 @@ function(Backbone, PersonalView, WorksView, EducationView, SkillsView) {
         content = $(this.currentView.render().el);
         container.html(content);
         this.currentView.el.className = route;
-        container.animate({opacity: 1, height: content.css('height')}, 500);
+        container.animate({opacity: 1}, 500);
       }.bind(this));
 
     },
@@ -50,9 +50,9 @@ function(Backbone, PersonalView, WorksView, EducationView, SkillsView) {
       this.changeView(personalView);
     },
 
-    showWorksView: function() {
-      var worksView = new WorksView();
-      this.changeView(worksView);
+    showJobsView: function() {
+      var jobsView = new JobsView();
+      this.changeView(jobsView);
     },
 
     showEducationView: function() {

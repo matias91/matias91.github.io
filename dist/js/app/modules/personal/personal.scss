@@ -1,0 +1,15 @@
+.personal {
+    &__img {
+        width: 20.220681%;
+        float: left;
+    }
+
+    &__info {
+        padding-left: 60px;
+
+        li {
+            margin: 20px 0;
+            font-size: 20px;
+        }
+    }
+}

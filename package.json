@@ -6,13 +6,17 @@
   "dependencies": {},
   "devDependencies": {
     "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-concat": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
     "grunt-sass": "^1.1.0"
   },
-  "scripts": {},
+  "scripts": {
+    "deploy": "git subtree push --prefix dist origin gh-pages"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/matias91/matias91.github.io.git"

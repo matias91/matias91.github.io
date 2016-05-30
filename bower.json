@@ -1,0 +1,19 @@
+{
+  "name": "matias91.github.io",
+  "version": "0.1",
+  "authors": [
+    "matias.calvo <mati.calvo.salsa@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "latest",
+    "backbone": "latest",
+    "jquery": "latest",
+    "underscore": "latest",
+    "requirejs": "latest",
+    "requirejs-text": "latest",
+    "require-css": "latest",
+    "require-handlebars-plugin": "latest",
+    "requirejs-style-plugins": "~0.0.2"
+  }
+}

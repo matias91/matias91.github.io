@@ -1,0 +1,17 @@
+.education {
+	background-color: #5E42A6;
+
+    ul li {
+	    padding-left: 15%;
+
+	    span {
+		    display: block;
+		    margin: 10px 15px;
+        	font-size: 16px;
+		}
+	}
+
+	&__subtitle {
+		font-weight: bold;
+	}
+}

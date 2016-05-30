@@ -12,6 +12,14 @@ module.exports = function(grunt) {
             }
         }
     },
+    copy: {
+      main: {
+        expand: true,
+        cwd: 'src',
+        src: '**',
+        dest: 'dist/'
+      }
+    },
     concat: {
       options: {
         // define a string to put between each file in the concatenated output
@@ -51,14 +59,17 @@ module.exports = function(grunt) {
     watch: {
       files: ['<%= jshint.files %>', 'src/**/*.scss'],
       tasks: ['sass', 'jshint']
-    }
+    },
+    clean: 'dist',
   });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-sass');
 
-  grunt.registerTask('default', ['sass', 'jshint', 'concat', 'uglify', 'watch']);
+  grunt.registerTask('default', ['clean', 'sass', 'jshint', 'copy', /*'concat', 'uglify', */'watch']);
 };

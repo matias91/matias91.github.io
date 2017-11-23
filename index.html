@@ -94,7 +94,7 @@
                         <div class="feature feature-3 boxed boxed--lg boxed--border">
                             <i class="icon icon-Add icon--lg"></i>
                             <h4>Extras</h4>
-                            <p>HTML templates engine, CSS preprocessors, Object-Oriented CSS, AJAX technologies, Restful APIs,
+                            <p>CSS preprocessors, Object-Oriented CSS, AJAX technologies, Restful APIs,
                                 ES6 and Responsive.
                                 <br>
                             </p>
@@ -148,7 +148,49 @@
                 </div>
             </div>
         </section>
+        <section class="switchable bg--dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <p class="lead">Contact me to coordinate a meeting.</p>
+                        <p class="lead">You won't regret!</p>
+                    </div>
+                    <div class="col-sm-6 col-xs-12">
+                        <div class="row">
+                            <form
+                                action="https://script.google.com/macros/s/AKfycbyvthbA7HfRec8t7HqEt-svz_Kwg8VVSt1harJFy4QIy7tk2cE/exec"
+                                id="gform"
+                                data-success="Thanks for your enquiry, we'll be in touch shortly."
+                                data-error="Please fill in all fields correctly."
+                            >
+                                <div class="col-sm-6 col-xs-12">
+                                    <label>Your Name:</label>
+                                    <input type="text" name="name" class="validate-required"> </div>
+                                <div class="col-sm-6 col-xs-12">
+                                    <label>Email Address:</label>
+                                    <input type="email" name="email" class="validate-required validate-email"> </div>
+                                <div class="col-sm-12 col-xs-12">
+                                    <label>Message:</label>
+                                    <textarea rows="4" name="message" class="validate-required"></textarea> </div>
+                                <div class="col-sm-12 col-xs-12">
+                                    <label class="sr-only">Keep this field blank</label>
+                                    <input style="display: none" id="honeypot" type="text" name="honeypot" value="" />
+                                </div>
+                                <div class="col-sm-5 col-md-4 col-xs-6">
+                                    <button type="submit" class="btn btn--primary type--uppercase">Send Enquiry</button>
+                                </div>
+                            </form>
+                            <!-- Customise the Thankyou Message People See when they submit the form: -->
+                            <div style="display:none;" id="thankyou_message">
+                                <h2><em>Thanks</em> for contacting me! I will get back to you soon!</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+    <script src="js/form-submission-handler.js"></script>
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/parallax.js"></script>
     <script src="js/granim.min.js"></script>
